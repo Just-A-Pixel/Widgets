@@ -1,6 +1,26 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import Accordion from './components/Accordion'
+
+
+const items = [
+    {
+        title: 'A',
+        content: 'aaaa'
+    },
+    {
+        title: 'B',
+        content: 'bbbb'
+    },
+    {
+        title: 'C',
+        content: 'cccc'
+    }
+]
 
 export default () => {
-    return <h1>Widgets App</h1>
+    return (
+        <div>
+            <Accordion items = {items}/>
+        </div>
+    )
 }
