@@ -17,10 +17,13 @@ const items = [
     }
 ]
 // eslint-disable-next-lin
-export default () => {
+
+const App = () => {
     return (
         <div>
             <Accordion items = {items}/>
         </div>
     )
 }
+
+export default App;
