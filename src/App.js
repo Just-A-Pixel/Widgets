@@ -1,27 +1,27 @@
 import React from 'react'
-import Accordion from './components/Accordion'
+// import Accordion from './components/Accordion'
+import Search from './components/Search'
 
+// const items = [
+//     {
+//         title: 'A',
+//         content: 'aaaa'
+//     },
+//     {
+//         title: 'B',
+//         content: 'bbbb'
+//     },
+//     {
+//         title: 'C',
+//         content: 'cccc'
+//     }
+// ]
 
-const items = [
-    {
-        title: 'A',
-        content: 'aaaa'
-    },
-    {
-        title: 'B',
-        content: 'bbbb'
-    },
-    {
-        title: 'C',
-        content: 'cccc'
-    }
-]
-// eslint-disable-next-lin
 
 const App = () => {
     return (
         <div>
-            <Accordion items = {items}/>
+            <Search />
         </div>
     )
 }
