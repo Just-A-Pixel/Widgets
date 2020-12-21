@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Search = () => {
+
     const [term, setTerm] = useState('potato')
+
     const [results, setResults] = useState([])
+
     useEffect(() => {               // Dont mark it as async
+        
         const search = async () => {        // Recommended React method
             const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
                 params: {
@@ -19,13 +23,21 @@ const Search = () => {
             setResults(data.query.search)
         };
         
-        const timeoutId = setTimeout(() => {
-            if(term){search();}
-        }, 500)
+        if(term && !results.length) {
+            search()
+        } else {
 
-        return () => {
-            clearTimeout(timeoutId)
+            const timeoutId = setTimeout(() => {
+                if(term){search();}
+            }, 1000)
+    
+            return () => {
+                clearTimeout(timeoutId)
+            }
+            
         }
+
+        
         
     }, [term])
 
