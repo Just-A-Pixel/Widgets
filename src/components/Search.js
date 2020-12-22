@@ -38,8 +38,8 @@ const Search = () => {
         }
 
         
-        
-    }, [term])
+        // eslint-disable-next-line
+    }, [term])   
 
     const renderedItems = results.map((result) => {
         return (
