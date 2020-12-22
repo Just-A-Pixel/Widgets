@@ -49,6 +49,10 @@ const App = () => {
                 options = {options}
             /> : null
             }
+            <br/>
+            <div><br/><br /><br />
+                <h1 style = {{color: selected.value}}>The text is {selected.value}</h1>
+            </div>
         </div>
     )
 }
