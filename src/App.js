@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-// import Accordion from './components/Accordion'
+import React, { useState } from 'react';
+import Accordion from './components/Accordion'
 // import Search from './components/Search'
-import Dropdown from './components/Dropdown'
-
+import Dropdown from './components/Dropdown';
+import Translate from './components/Translate';
 // const items = [
 //     {
 //         title: 'A',
@@ -36,25 +36,35 @@ const options = [
 ]
 
 const App = () => {
-    const [selected, setSelected] = useState(options[0])
-    const [showDropdown, setShowDropdown] = useState(true);
-
     return (
         <div>
-            <button onClick={()=>setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
-            { showDropdown ?
-            <Dropdown 
-                selected = {selected}
-                onSelectedChange={setSelected}
-                options = {options}
-            /> : null
-            }
-            <br/>
-            <div><br/><br /><br />
-                <h1 style = {{color: selected.value}}>The text is {selected.value}</h1>
-            </div>
+            <Translate />
         </div>
     )
 }
+
+
+
+// const App = () => {
+//     const [selected, setSelected] = useState(options[0])
+//     const [showDropdown, setShowDropdown] = useState(true);
+
+//     return (
+//         <div>
+//             <button onClick={()=>setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
+//             { showDropdown ?
+//             <Dropdown 
+//                 selected = {selected}
+//                 onSelectedChange={setSelected}
+//                 options = {options}
+//             /> : null
+//             }
+//             <br/>
+//             <div><br/><br /><br />
+//                 <h1 style = {{color: selected.value}}>The text is {selected.value}</h1>
+//             </div>
+//         </div>
+//     )
+// }
 
 export default App;
